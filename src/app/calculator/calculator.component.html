@@ -1,0 +1,38 @@
+<form>
+  <div class="item-form">
+    <label for="item">CPF </label>
+    <input name="item" type="text" placeholder="000.000.000-00" />
+  </div>
+  <div class="item-form">
+    <label for="item"> Quantidades de Item </label>
+    <input name="item" value="" type="number" #number [(ngModel)]="item" />
+  </div>
+  <div class="item-form">
+    <label for="valor"> Valor do Item </label>
+    <input
+      name="valor"
+      class="valor"
+      value=""
+      type="number"
+      [(ngModel)]="valor"
+    />
+  </div>
+  <div class="item-form">
+    <label for="valor"> Estado </label>
+    <select class="selecao">
+      <option
+        *ngFor="let estado of estados"
+        title="{{ estado.label }}"
+        value="{{ estado.value }}"
+        [(ngModel)]="estado"
+      >
+        {{ estado.title }}
+      </option>
+    </select>
+  </div>
+  <button class="submit" (click)="enviar()">Calcular</button>
+</form>
+
+<div class="resullt">
+  {{ result }}
+</div>

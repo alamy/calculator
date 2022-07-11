@@ -1,0 +1,11 @@
+/* Add application styles & imports to this file! */
+body {
+  height: 100vh;
+  background: rgb(252, 252, 252);
+  background: linear-gradient(
+    180deg,
+    rgba(252, 252, 252, 1) 0%,
+    rgba(209, 209, 209, 1) 35%,
+    rgba(191, 191, 191, 1) 100%
+  );
+}
